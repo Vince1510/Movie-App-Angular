@@ -1,0 +1,14 @@
+<div *ngIf="bestMovies.length > 0; else noMovies">
+  <h2>Best Movies of All Time</h2>
+  <div class="movie-card" *ngFor="let movie of bestMovies">
+    <h3>{{ movie.title }}</h3>
+    <p>{{ movie.description }}</p>
+    <p><strong>Category:</strong> {{ movie.category }}</p>
+    <img [src]="movie.image" alt="{{ movie.title }}" width="200" />
+    <p><strong>IMDb ID:</strong> {{ movie.imdbId }}</p>
+  </div>
+</div>
+
+<ng-template #noMovies>
+  <p>No movies found!</p>
+</ng-template>

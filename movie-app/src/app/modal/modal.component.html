@@ -1,0 +1,11 @@
+<div *ngIf="isModalOpen" class="modal">
+  <div class="modal-content">
+    <button (click)="closeModal()" class="close-button">Close</button>
+    <iframe
+      *ngIf="iframeUrl"
+      [src]="iframeUrl"
+      width="800"
+      height="450"
+    ></iframe>
+  </div>
+</div>

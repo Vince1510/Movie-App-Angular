@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap");
+
+.title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  margin: 1rem;
+}
+.description {
+  font-size: 1rem;
+}
+
+.container {
+  width: 100%; /* Reduced the width to make the carousel smaller */
+  max-width: 1000px; /* Set a max width to limit the carousel's width */
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 20px; /* Padding for spacing around the container */
+  box-sizing: border-box;
+}
+
+.card {
+  flex: 0 0 220px;
+  border-radius: 0.5rem;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+  box-shadow: 1px 5px 15px rgba(62, 14, 14, 0.5);
+  position: relative;
+  overflow: hidden;
+  background: #000;
+  display: flex;
+  height: auto; /* Flexible height based on content and image */
+}
+
+.card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.content {
+  font-size: 1.5rem;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 15px;
+  opacity: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(
+    0deg,
+    rgba(46, 2, 2, 0.8) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: translateY(100%);
+  transition: opacity 0.5s ease-in-out, transform 0.5s 0.2s;
+  visibility: hidden;
+  height: 100%;
+  z-index: 2; /* Ensure text is above the image */
+}
+
+.card:hover .card-image {
+  transform: scale(1.1); /* Slight zoom effect on hover */
+  filter: brightness(50%); /* Darkens the image on hover */
+}
+
+.card:hover .content {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+}
+
+.card:hover {
+  transform: translateY(-20px); /* Smooth upward movement on hover */
+  box-shadow: 1px 3px 15px rgb(255, 0, 0);
+}
+
+.extra-info {
+  font-size: 0.9rem;
+  margin-top: 10px;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.card:hover .extra-info {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .container {
+    width: 90%; /* Make the carousel take up 90% of the screen */
+  }
+  .card {
+    flex: 0 0 180px; /* Make each card slightly smaller on smaller screens */
+  }
+}
+
+/* Modal Styles */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: rgb(42, 0, 0);
+  width: 80%;
+  height: 80%;
+  padding: 30px;
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 30px;
+  cursor: pointer;
+  color: #fff;
+}
