@@ -1,6 +1,12 @@
-<h1 class="title">Highlighted movies</h1>
+<h1 class="title">Highlighted Movies</h1>
 
-<div class="container">
+<!-- No Movies Found Message -->
+<div *ngIf="noMoviesFound" class="no-movies-found">
+  <p class="title">No movies were found. Please try again later.</p>
+</div>
+
+<!-- Movies Container -->
+<div class="container" *ngIf="movies.length > 0">
   <div
     *ngFor="let movie of movies"
     class="card"

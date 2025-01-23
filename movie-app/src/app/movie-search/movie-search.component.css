@@ -10,6 +10,10 @@
   max-width: 322px;
 }
 
+.title {
+  color: #ffffff;
+}
+
 .movie-search-container form {
   display: flex;
   flex-direction: column;
@@ -29,14 +33,17 @@
 
 .movie-search-container button {
   padding: 8px;
-  background-color: #007bff;
+  background-color: #8b0000;
   color: white;
   border: none;
+  border-radius: 8px;
   cursor: pointer;
 }
 
 .movie-search-container button:disabled {
-  background-color: #ccc;
+  background-color: #8b0000;
+  opacity: 0.6;
+  border-radius: 8px;
 }
 
 .movie-search-container .movie-image {
