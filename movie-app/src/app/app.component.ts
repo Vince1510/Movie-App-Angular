@@ -3,7 +3,7 @@ import { MovieListComponent } from './movie-list/movie-list.component';
 import { MovieSearchComponent } from './movie-search/movie-search.component';
 import { MovieService } from './movie.service';
 import { CarouselComponent } from './carousel/carousel.component';
-import { ModalComponent } from './modal/modal.component'; // Import the modal component
+import { ModalComponent } from './modal/modal.component';
 
 @Component({
   selector: 'app-root',
