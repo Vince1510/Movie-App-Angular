@@ -1,0 +1,39 @@
+<h1 class="title">Highlighted movies</h1>
+
+<div class="container">
+  <div
+    *ngFor="let movie of movies"
+    class="card"
+    (click)="onMovieClick(movie.imdbId)"
+  >
+    <div class="content">
+      <h2 class="title">{{ movie.title }}</h2>
+      <p class="description">{{ movie.description }}</p>
+      <div class="extra-info">
+        <p>IMDb ID: {{ movie.imdbId }}</p>
+      </div>
+    </div>
+    <div class="image-container">
+      <img
+        [src]="movie.image"
+        alt="{{ movie.title }}"
+        class="card-image"
+        (error)="movie.image = 'path_to_placeholder_image.jpg'"
+      />
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal" *ngIf="isModalOpen">
+  <div class="modal-content">
+    <span class="close" (click)="closeModal()">&times;</span>
+    <iframe
+      [src]="iframeUrl"
+      style="width: 100%; height: 100%"
+      frameborder="0"
+      referrerpolicy="origin"
+      allowfullscreen
+    ></iframe>
+  </div>
+</div>

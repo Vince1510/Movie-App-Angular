@@ -1,0 +1,28 @@
+.movie-list-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.movie-card {
+  border: 1px solid #ccc;
+  padding: 16px;
+  margin: 16px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.movie-image {
+  width: 100%;
+  height: auto;
+  margin-bottom: 16px;
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}

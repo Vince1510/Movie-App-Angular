@@ -1,0 +1,50 @@
+.movie-search-container {
+  padding: 20px;
+
+  background: rgba(255, 255, 255, 0.16); /* Glass effect */
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3.5px);
+  -webkit-backdrop-filter: blur(3.5px);
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  max-width: 322px;
+}
+
+.movie-search-container form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.movie-search-container label {
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+
+.movie-search-container input {
+  padding: 8px;
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+.movie-search-container button {
+  padding: 8px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.movie-search-container button:disabled {
+  background-color: #ccc;
+}
+
+.movie-search-container .movie-image {
+  max-width: 100%;
+  height: auto;
+  margin-top: 10px;
+}
+
+.close-btn {
+  float: right;
+}

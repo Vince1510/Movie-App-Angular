@@ -1,0 +1,9 @@
+@if (movie) {
+<h2>{{ movie.title }}</h2>
+<p>{{ movie.description }}</p>
+<p><strong>Category:</strong> {{ movie.category }}</p>
+<img [src]="movie.image" alt="{{ movie.title }}" width="300" />
+<p><strong>IMDb ID:</strong> {{ movie.imdbId }}</p>
+} @else {
+<p>Loading movie details...</p>
+}
